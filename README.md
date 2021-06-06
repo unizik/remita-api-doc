@@ -22,7 +22,7 @@ This is an important part in any call to any of our endpoints. The headers must 
 ```
 ### Base URL and Headers
 ```
-BASE-URL: https://remita.api.unizik.edu.ng
+BASE-URL: https://api.unizik.edu.ng/remita/v1
 ```
 Header Requirements:
   - `NAU-Contractor-ID`
@@ -58,7 +58,7 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`
 ###### Response (json)
 ```
 {
-  code: 2101,
+  code: 200,
   message: "RRR generated successfully",
   status: "success",
   data: {
@@ -137,7 +137,7 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`. The payment 
 ###### Response (json)
 ```
 {
-  code: 2101,
+  code: 211,
   message: "RRR generated successfully",
   status: "success",
   data: {
@@ -190,7 +190,7 @@ Verify RRR for any payment using our `{{base-url}}/rrr/verify`
 ###### Response (json)
 ```
 {
-  code: 2102,
+  code: 212,
   message: "RRR Paid",
   status: "success",
   data: {
@@ -232,6 +232,5 @@ beneficiaryAccount|String|`Required` Account Number to which Beneficiary will be
 bankCode|String|`Required` Bank code for Account Number of Beneficiary in the split payment. Click Here of Bank Codes
 beneficiaryAmount|String|`Required` Amount from the Total Invoiced amount to be paid to beneficiary
 deductFeeFrom|String|`Required` Value should be '1' or '0'. '1' if the benifiary in question will be bearing the transaction fees. Transaction fees can only be borne by one beneficiary.
-merchantId|String|`Required` Your Unique Merchant ID on Remita. See 'Getting Started' for demo Merchant ID
-serviceTypeId|String|`Required` ID for your good/service on Remita. See 'Getting Started' for demo Service Type ID
+apiKey|String|`Required` Your Unique API Key from UNIZIK.
 amount|String|`Required` Amount for Invoice
