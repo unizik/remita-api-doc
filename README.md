@@ -17,7 +17,7 @@ If you encounter any issues, please contact the MICTU Team for support.
 This is an important part in any call to any of our endpoints. The headers must include the following custom headers:
 ```
   Nau-Contractor-ID:
-  Nau-API-Key:
+  Nau-Api-Key:
   Nau-Access-Token:
 ```
 ### Base URL and Headers
@@ -36,9 +36,8 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`
 ``POST``
 ###### Headers
 **Content-Type:** `application/json`
-**Content-Type:** `application/json`
 **Nau-Contractor-ID:** `{{contractorID}}`
-**Nau-API-Key:** `{{apiKey}}`
+**Nau-Api-Key:** `{{apiKey}}`
 **Nau-Access-Token:** `{{apiToken}}`
 
 ###### Body (raw)
@@ -78,7 +77,7 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`
 curl --location -g --request POST '{{base-url}}/rrr/generate' \
 --header 'Content-Type: application/json' \
 --header 'Nau-Contractor-ID: {{contractorID}}' \
---header 'Nau-API-Key: {{apiKey}}' \
+--header 'Nau-Api-Key: {{apiKey}}' \
 --header 'Nau-Access-Token: {{apiToken}}' \
 --data-raw '{
     "serviceTypeId": "{{serviceTypeId}}",
@@ -100,9 +99,8 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`. The payment 
 ``POST``
 ###### Headers
 **Content-Type:** `application/json`
-**Content-Type:** `application/json`
 **Nau-Contractor-ID:** `{{contractorID}}`
-**Nau-API-Key:** `{{apiKey}}`
+**Nau-Api-Key:** `{{apiKey}}`
 **Nau-Access-Token:** `{{apiToken}}`
 
 ###### Body (raw)
@@ -160,7 +158,7 @@ Generate RRR for any payment using our `{{base-url}}/rrr/generate`. The payment 
 ```
 curl --location -g --request POST '{{base-url}}/rrr/generate' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Nau-Contractor-ID={{contractorID}},Nau-API-Key={{apiKey}},Nau-Access-Token={{apiToken}}' \
+--header 'Authorization: Nau-Contractor-ID={{contractorID}},Nau-Api-Key={{apiKey}},Nau-Access-Token={{apiToken}}' \
 --data-raw '{
     "serviceTypeId": "{{serviceTypeId}}",
     "amount": "{{totalAmount}}",
@@ -182,7 +180,7 @@ Verify RRR for any payment using our `{{base-url}}/rrr/verify`
 ###### Headers
 **Content-Type:** `application/json`
 **Nau-Contractor-ID:** `{{contractorID}}`
-**Nau-API-Key:** `{{apiKey}}`
+**Nau-Api-Key:** `{{apiKey}}`
 **Nau-Access-Token:** `{{apiToken}}`
 
 ###### Body (raw)
@@ -216,7 +214,7 @@ Verify RRR for any payment using our `{{base-url}}/rrr/verify`
 curl --location -g --request GET '{{base-url}}/rrr/verify/{{rrr}}/{{payerID}}/{{orderID}}' \
 --header 'Content-Type: application/json' \
 --header 'Nau-Contractor-ID: {{contractorID}}' \
---header 'Nau-API-Key: {{apiKey}}' \
+--header 'Nau-Api-Key: {{apiKey}}' \
 --header 'Nau-Access-Token: {{apiToken}}'
 ```
 
